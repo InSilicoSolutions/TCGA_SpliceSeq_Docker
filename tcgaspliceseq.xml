@@ -1,0 +1,15 @@
+ <Resource name="TCGASS_SQLConnection" auth="Container" type="javax.sql.DataSource" 
+   factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+   maxActive="10" maxIdle="10" minIdle="1" initialSize="1" maxWait="10000"
+   username="<user>" password="<pass>" driverClassName="com.mysql.jdbc.Driver"
+   validationQuery="Select 1"
+   url="jdbc:mysql://<host>:3306/TCGA_SpliceGraph?autoReconnect=true"/>
+ <Resource name="TCGASS_SQLConnection_Download" auth="Container" type="javax.sql.DataSource"
+   factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+   maxActive="10" maxIdle="10" minIdle="1" initialSize="1" maxWait="10000"
+   username="<user>" password="<pass>" driverClassName="com.mysql.jdbc.Driver"
+   validationQuery="Select 1"
+   url="jdbc:mysql://<host>:3306/TCGA_Download?autoReconnect=true"/>
+
+ <!-- Controls the size of the SQLCache that caches the results for the top events page -->
+ <Environment name="TCGASS_SQLCacheSize" value="10" type="java.lang.Integer"/>
